@@ -30,10 +30,10 @@ cover:
     # caption: "<text>" # display caption under cover
     # relative: false # when using page bundles set this to true
     hidden: true # only hide on current single page
-# editPost:
+editPost:
 #     URL: "https://github.com/<path_to_repo>/content"
 #     Text: "Suggest Changes" # edit text
-#     appendFilePath: true # to append file path to Edit link
+    appendFilePath: true # to append file path to Edit link
 summary: Descriping my homelab setup, the hardware used, the main components and a short introduction into the Software stack.
 ---
 
@@ -68,7 +68,7 @@ The other four VMs are part of my Kubernetes Cluster: two Control-Plane Nodes ac
 ## Kubernetes Cluster
 My Kubernetes Cluster setup is a bit more complex. I use [RKE2](https://docs.rke2.io) mainly the Clusters I have to deal with in my day job use this as the Kubernetes distribution.  
 The Cluster consists of the VMs on my Proxmox host and also of two RaspberyPi nodes and a VM on the [Hetzner Cloud](https://www.hetzner.com/cloud/). One PI 4  acts as the third Control Plane, and recently, I added a Pi 5 as an additional worker node. This allows me to build ARM64 software and Docker images. The Hetzner-cx22 worker node comes with a fixed IP address, which makes it easy to point DNS records to it and set up the cluster ingress to listen on this IP. There is no need for any DyDNS setups and exposing my changing IP address. 
-#### Tailscale
+### Tailscale
 To connect the K8s sitting in my private IP network to the "public" node, I use Tailscale as the peer-to-peer VPN software. It creates a Tailscale interface on each node the CNI binds to and uses it for all in-cluster traffic. A dedicated LXC acts as a sub-net router, giving the remote node access to the NAS on the same local network. 
 
 This is a high-level overview of my current home lab system. In future posts, I will go into further detail on different aspects of this setup. Software that I'm using, tools to manage these systems and more.
