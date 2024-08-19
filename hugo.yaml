@@ -71,11 +71,11 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
+    Title: "Welcome to my blog! \U0001F44B"
     Content: |- 
-      Welcome to my blog
-      ## test
-      more text
+      My name is Sebastian, and I'm a DevOps Engineer with a background in Media Technology Systems.
+
+      In this blog, I'll mainly blog about my home lab setup and the DevOps technologies I encounter and find interesting. I hope you share that interest and enjoy whatever I'm writing.
 
   socialIcons:
     - name: linkedIn
