@@ -1,6 +1,8 @@
 ---
 title: Kubernetes Cluster Setup
 date: 2024-08-31
+tags: ["home lab","kubernetes", "tailscale"]
+categories: ["kubernetes"]
 author: Sebastian
 showToc: true
 TocOpen: false
